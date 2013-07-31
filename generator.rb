@@ -36,7 +36,7 @@ class Ruhoh
         collection.all.each do |page|
           xml.url {
             xml.loc_ "#{production_url}#{page['url']}"
-            xml.lastmod_ File.mtime(page.pointer['realpath'])
+            xml.lastmod_ File.mtime(page.pointer['realpath']).strftime("%Y-%m-%d")
             xml.priority_ page.data['priority']
             xml.changefreq_ page.data['changefreq']
           }
