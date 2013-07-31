@@ -1,7 +1,3 @@
-#plugins:
-#  sitemap:
-#    file_name: sitemap.xml
-
 require 'nokogiri'
 
 class Ruhoh
