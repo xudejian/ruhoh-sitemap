@@ -59,3 +59,10 @@ file_name: sitemap.xml
 changefreq: daily
 priority: 0.7
 ```
+
+
+### Author
+
+Dejian Xu
+[G+](https://plus.google.com/116305544434538996428?rel=author)
+
