@@ -19,12 +19,10 @@ class Ruhoh
           }
         end
 
-        FileUtils.cd(@ruhoh.paths.compiled) {
-          sitemap_file_name = @config['file_name'] || "sitemap.xml"
-          File.open(sitemap_file_name, 'w'){ |p| p.puts sitemap.to_xml }
+        sitemap_file_name = @config['file_name'] || "sitemap.xml"
+        File.open(@ruhoh.compiled_path(sitemap_file_name), 'w'){ |p| p.puts sitemap.to_xml }
 
-          Ruhoh::Friend.say { green "  > #{sitemap_file_name}" }
-        }
+        Ruhoh::Friend.say { green "  > #{sitemap_file_name}" }
       end
 
       protected
